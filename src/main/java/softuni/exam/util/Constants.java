@@ -7,7 +7,7 @@ public class Constants {
     public static final String CITIES_PATH_FILE = "src/main/resources/files/json/cities.json";
 
     // XML
-    public static final String FORECASTS_PATH_FILE = "src/main/resources/files/xml/forecasts.json";
+    public static final String FORECASTS_PATH_FILE = "src/main/resources/files/xml/forecasts.xml";
 
     // STRING FORMAT
     public static final String SUCCESSFUL_IMPORT_COUNTRY = "Successfully imported country %s - %s";

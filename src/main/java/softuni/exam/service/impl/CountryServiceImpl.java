@@ -3,7 +3,7 @@ package softuni.exam.service.impl;
 import com.google.gson.Gson;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-import softuni.exam.models.dto.CountriesSeedDto;
+import softuni.exam.models.dto.gson.CountriesSeedDto;
 import softuni.exam.models.entity.Country;
 import softuni.exam.repository.CountryRepository;
 import softuni.exam.service.CountryService;
