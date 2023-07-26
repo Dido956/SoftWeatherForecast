@@ -5,12 +5,28 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "country")
-public class Country extends BaseEntity{
+@Table(name = "countries")
+public class Country extends BaseEntity {
 
-    @Column(name = "country_name",unique = true)
+    @Column(name = "country_name", unique = true)
     private String countryName;
 
-    @Column(name = "currency",nullable = false)
+    @Column(name = "currency", nullable = false)
     private String currency;
+
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
 }

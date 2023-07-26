@@ -2,10 +2,11 @@ package softuni.exam.models.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "city")
+@Table(name = "cities")
 public class City extends BaseEntity{
 
     @Column(name = "city_name",unique = true,nullable = false)
@@ -16,4 +17,7 @@ public class City extends BaseEntity{
 
     @Column(name = "population", nullable = false)
     private Integer population;
+
+    @ManyToOne
+    private Country country;
 }
