@@ -1,25 +1,27 @@
-package softuni.exam.models.entity;
+package softuni.exam.models.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import com.google.gson.annotations.Expose;
 
-@Entity
-@Table(name = "cities")
-public class City extends BaseEntity{
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 
-    @Column(name = "city_name",unique = true,nullable = false)
+public class CitiesSeedDto {
+
+    @Expose
+    @Size(min = 2, max = 60)
     private String cityName;
 
-    @Column(name = "description",columnDefinition = "TEXT")
+    @Expose
+    @Size(min = 2)
     private String description;
 
-    @Column(name = "population", nullable = false)
+    @Expose
+    @Min(500)
     private Integer population;
 
-    @ManyToOne
-    private Country country;
+    @Expose
+    private Long country;
+
 
     public String getCityName() {
         return cityName;
@@ -45,11 +47,11 @@ public class City extends BaseEntity{
         this.population = population;
     }
 
-    public Country getCountry() {
+    public Long getCountry() {
         return country;
     }
 
-    public void setCountry(Country country) {
+    public void setCountry(Long country) {
         this.country = country;
     }
 }

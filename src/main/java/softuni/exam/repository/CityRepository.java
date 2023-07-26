@@ -8,4 +8,6 @@ import softuni.exam.models.entity.City;
 public interface CityRepository extends JpaRepository<City, Long> {
 
 
+    boolean existsByCityName(String cityName);
+
 }
